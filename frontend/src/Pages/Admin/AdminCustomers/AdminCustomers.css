@@ -1,0 +1,1185 @@
+/* Page */
+.admin-customers-page {
+  min-height: 100vh;
+  padding: 32px;
+  background: #f8fafc;
+}
+
+/* Header */
+.admin-customers-header {
+  margin-bottom: 25px;
+}
+
+.admin-customers-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 750;
+  color: #0f172a;
+}
+
+.admin-customers-header p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Card */
+.admin-customers-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.03);
+}
+
+/* Tool Bar */
+.admin-customers-toolbar {
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.admin-customer-search {
+  width: 300px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  padding: 0 12px;
+  color: #94a3b8;
+  background: #ffffff;
+  transition: 0.2s ease;
+}
+
+.admin-customer-search:focus-within {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.08);
+}
+
+.admin-customer-search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+  color: #334155;
+  background: transparent;
+}
+
+.admin-customer-search input::placeholder {
+  color: #94a3b8;
+}
+
+.admin-customers-toolbar > span {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+/* Table */
+.admin-customers-table-wrapper {
+  overflow-x: auto;
+}
+
+.admin-customers-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 950px;
+}
+
+.admin-customers-table th {
+  background: #f8fafc;
+  padding: 14px 18px;
+  text-align: left;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.admin-customers-table td {
+  padding: 16px 18px;
+  border-top: 1px solid #f1f5f9;
+  font-size: 12px;
+  color: #475569;
+  white-space: nowrap;
+}
+
+.admin-customers-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.admin-customers-table tbody tr:hover {
+  background: #fafafa;
+}
+
+/* Customer Info */
+.admin-customer-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-customer-avatar {
+  width: 40px;
+  height: 40px;
+  background: #fff7ed;
+  color: #f97316;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.admin-customer-info > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-customer-info strong {
+  color: #0f172a;
+  font-size: 13px;
+}
+
+.admin-customer-info span {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+/* Status */
+.admin-customer-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.admin-customer-status.active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.admin-customer-status.inactive {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+/* Actions */
+.admin-customer-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.admin-customer-view,
+.admin-customer-delete {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 7px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-customer-view {
+  background: #f8fafc;
+  color: #475569;
+}
+
+.admin-customer-view:hover {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.admin-customer-delete {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.admin-customer-delete:hover {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.admin-customer-delete:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Loading */
+.admin-customers-loading {
+  min-height: 430px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+}
+
+.admin-customers-loading p {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.admin-loading-spinner {
+  width: 38px;
+  height: 38px;
+  border: 3px solid #fed7aa;
+  border-top-color: #f97316;
+  border-radius: 50%;
+  animation: adminCustomerSpin 0.8s linear infinite;
+}
+
+@keyframes adminCustomerSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error */
+.admin-customers-error {
+  min-height: 430px;
+  padding: 40px;
+  background: #ffffff;
+  border: 1px solid #fecaca;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.admin-error-icon {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  border-radius: 15px;
+  font-size: 27px;
+  margin-bottom: 18px;
+}
+
+.admin-customers-error h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 21px;
+}
+
+.admin-customers-error p {
+  margin: 8px 0 20px;
+  color: #64748b;
+  font-size: 13px;
+  max-width: 500px;
+}
+
+.admin-customers-error button {
+  border: none;
+  background: #f97316;
+  color: #ffffff;
+  padding: 11px 17px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.admin-customers-error button:hover {
+  background: #ea580c;
+}
+
+/* No Customers */
+.admin-no-customers {
+  height: 250px;
+  text-align: center !important;
+  vertical-align: middle;
+
+  color: #94a3b8 !important;
+}
+
+.admin-no-customers svg {
+  display: block;
+  margin: 0 auto 10px;
+  font-size: 25px;
+}
+
+.admin-no-customers strong {
+  display: block;
+  color: #475569;
+  font-size: 13px;
+}
+
+.admin-no-customers span {
+  display: block;
+  margin-top: 5px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+/* Delete Modal Overlay */
+.admin-delete-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.48);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: adminDeleteOverlayIn 0.2s ease;
+}
+
+@keyframes adminDeleteOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Delete Modal */
+.admin-delete-modal {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow:
+    0 25px 50px rgba(15, 23, 42, 0.18),
+    0 8px 20px rgba(15, 23, 42, 0.08);
+  animation: adminDeleteModalIn 0.25s ease;
+}
+
+@keyframes adminDeleteModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Close Button */
+.admin-delete-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  background: #f8fafc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-delete-close:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.admin-delete-close:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Delete Icon */
+.admin-delete-icon {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  font-size: 25px;
+}
+
+.admin-delete-modal h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.admin-delete-modal > p {
+  margin: 8px 0 20px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Customer Info in Modal */
+.admin-delete-customer-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.admin-delete-avatar {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.admin-delete-customer-info > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-delete-customer-info strong {
+  color: #0f172a;
+  font-size: 13px;
+}
+
+.admin-delete-customer-info span {
+  color: #94a3b8;
+  font-size: 11px;
+  word-break: break-all;
+}
+
+/* Delete Warning */
+.admin-delete-warning {
+  padding: 14px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+  margin-bottom: 22px;
+}
+
+.admin-delete-warning strong {
+  display: block;
+  color: #9a3412;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.admin-delete-warning ul {
+  margin: 0 0 9px;
+  padding-left: 18px;
+  color: #c2410c;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.admin-delete-warning > span {
+  color: #9a3412;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Delete Actions */
+.admin-delete-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.admin-delete-cancel,
+.admin-delete-confirm {
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-delete-cancel {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+.admin-delete-cancel:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.admin-delete-confirm {
+  background: #dc2626;
+  color: #ffffff;
+  border: 1px solid #dc2626;
+}
+
+.admin-delete-confirm:hover {
+  background: #b91c1c;
+  border-color: #b91c1c;
+}
+
+.admin-delete-cancel:disabled,
+.admin-delete-confirm:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Delete Spinner */
+.admin-delete-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: adminDeleteSpin 0.7s linear infinite;
+}
+
+@keyframes adminDeleteSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Admin - customer Page Responsive */
+@media (max-width: 1024px) {
+  .admin-customers-page {
+    padding: 26px;
+  }
+
+  .admin-customers-header h1 {
+    font-size: 26px;
+  }
+
+  .admin-customers-card {
+    border-radius: 14px;
+  }
+
+  .admin-customers-toolbar {
+    padding: 16px;
+  }
+
+  .admin-customer-search {
+    width: 280px;
+  }
+
+  .admin-customers-table {
+    min-width: 900px;
+  }
+
+  .admin-customers-table th {
+    padding: 13px 15px;
+  }
+
+  .admin-customers-table td {
+    padding: 15px;
+  }
+
+  .admin-delete-modal {
+    max-width: 430px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-customers-page {
+    padding: 22px;
+  }
+
+  .admin-customers-header {
+    margin-bottom: 20px;
+  }
+
+  .admin-customers-header h1 {
+    font-size: 24px;
+  }
+
+  .admin-customers-header p {
+    font-size: 13px;
+  }
+
+  /* Toolbar */
+  .admin-customers-toolbar {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .admin-customer-search {
+    width: 250px;
+    height: 40px;
+  }
+
+  .admin-customers-toolbar > span {
+    font-size: 11px;
+  }
+
+  /* Table */
+  .admin-customers-table {
+    min-width: 850px;
+  }
+
+  .admin-customers-table th {
+    padding: 12px 14px;
+    font-size: 10px;
+  }
+
+  .admin-customers-table td {
+    padding: 14px;
+    font-size: 11px;
+  }
+
+  .admin-customer-avatar {
+    width: 37px;
+    height: 37px;
+  }
+
+  .admin-customer-info {
+    gap: 10px;
+  }
+
+  .admin-customer-info strong {
+    font-size: 12px;
+  }
+
+  .admin-customer-info span {
+    font-size: 10px;
+  }
+
+  /* Modal */
+  .admin-delete-modal {
+    max-width: 420px;
+    padding: 26px;
+  }
+}
+
+@media (max-width: 425px) {
+  .admin-customers-page {
+    padding: 16px;
+  }
+
+  .admin-customers-header {
+    margin-bottom: 16px;
+  }
+
+  .admin-customers-header h1 {
+    font-size: 22px;
+  }
+
+  .admin-customers-header p {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+
+  /* Card */
+  .admin-customers-card {
+    border-radius: 12px;
+  }
+
+  /* Toolbar */
+  .admin-customers-toolbar {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 9px;
+  }
+
+  .admin-customer-search {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+  }
+
+  .admin-customers-toolbar > span {
+    align-self: flex-end;
+    font-size: 11px;
+  }
+
+  /* Table */
+  .admin-customers-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .admin-customers-table {
+    min-width: 820px;
+  }
+
+  .admin-customers-table th {
+    padding: 12px;
+    font-size: 10px;
+  }
+
+  .admin-customers-table td {
+    padding: 13px 12px;
+    font-size: 11px;
+  }
+
+  .admin-customer-info {
+    gap: 9px;
+  }
+
+  .admin-customer-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .admin-customer-info strong {
+    font-size: 12px;
+  }
+
+  .admin-customer-info span {
+    font-size: 10px;
+  }
+
+  .admin-customer-status {
+    padding: 4px 8px;
+    font-size: 9px;
+  }
+
+  .admin-customer-view,
+  .admin-customer-delete {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* No customers */
+  .admin-no-customers {
+    height: 220px;
+  }
+
+  /* Loading */
+  .admin-customers-loading,
+  .admin-customers-error {
+    min-height: 380px;
+  }
+
+  /* Error */
+  .admin-customers-error {
+    padding: 25px 18px;
+  }
+
+  .admin-customers-error h2 {
+    font-size: 19px;
+  }
+
+  .admin-customers-error p {
+    font-size: 12px;
+  }
+
+  /* Delete Modal */
+  .admin-delete-overlay {
+    padding: 16px;
+  }
+
+  .admin-delete-modal {
+    max-width: 100%;
+    padding: 24px 20px;
+    border-radius: 15px;
+  }
+
+  .admin-delete-close {
+    top: 12px;
+    right: 12px;
+  }
+
+  .admin-delete-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 23px;
+    margin-bottom: 15px;
+  }
+
+  .admin-delete-modal h2 {
+    font-size: 19px;
+  }
+
+  .admin-delete-modal > p {
+    font-size: 12px;
+    margin-bottom: 17px;
+  }
+
+  .admin-delete-customer-info {
+    padding: 12px;
+  }
+
+  .admin-delete-warning {
+    padding: 12px;
+    margin-bottom: 18px;
+  }
+
+  .admin-delete-actions {
+    gap: 8px;
+  }
+
+  .admin-delete-cancel,
+  .admin-delete-confirm {
+    min-height: 38px;
+    padding: 0 13px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 375px) {
+  .admin-customers-page {
+    padding: 13px;
+  }
+
+  .admin-customers-header h1 {
+    font-size: 21px;
+  }
+
+  .admin-customers-header p {
+    font-size: 11px;
+  }
+
+  .admin-customers-card {
+    border-radius: 10px;
+  }
+
+  .admin-customers-toolbar {
+    padding: 10px;
+  }
+
+  .admin-customer-search {
+    height: 38px;
+    padding: 0 10px;
+    gap: 7px;
+  }
+
+  .admin-customer-search input {
+    font-size: 12px;
+  }
+
+  .admin-customers-toolbar > span {
+    font-size: 10px;
+  }
+
+  /* Keep table horizontally scrollable */
+  .admin-customers-table {
+    min-width: 800px;
+  }
+
+  .admin-customers-table th {
+    padding: 11px;
+    font-size: 9px;
+  }
+
+  .admin-customers-table td {
+    padding: 12px 11px;
+    font-size: 10px;
+  }
+
+  .admin-customer-avatar {
+    width: 34px;
+    height: 34px;
+  }
+
+  .admin-customer-info {
+    gap: 8px;
+  }
+
+  .admin-customer-info strong {
+    font-size: 11px;
+  }
+
+  .admin-customer-info span {
+    font-size: 9px;
+  }
+
+  .admin-customer-status {
+    padding: 4px 7px;
+    font-size: 8px;
+  }
+
+  .admin-customer-view,
+  .admin-customer-delete {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Modal */
+  .admin-delete-overlay {
+    padding: 12px;
+  }
+
+  .admin-delete-modal {
+    padding: 22px 16px;
+  }
+
+  .admin-delete-modal h2 {
+    font-size: 18px;
+  }
+
+  .admin-delete-modal > p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .admin-delete-customer-info {
+    padding: 10px;
+  }
+
+  .admin-delete-avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .admin-delete-customer-info strong {
+    font-size: 12px;
+  }
+
+  .admin-delete-customer-info span {
+    font-size: 10px;
+  }
+
+  .admin-delete-warning {
+    padding: 10px;
+  }
+
+  .admin-delete-warning strong {
+    font-size: 11px;
+  }
+
+  .admin-delete-warning ul {
+    font-size: 10px;
+  }
+
+  .admin-delete-warning > span {
+    font-size: 9px;
+  }
+
+  .admin-delete-actions {
+    width: 100%;
+  }
+
+  .admin-delete-cancel,
+  .admin-delete-confirm {
+    flex: 1;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .admin-customers-page {
+    padding: 10px;
+  }
+
+  .admin-customers-header {
+    margin-bottom: 13px;
+  }
+
+  .admin-customers-header h1 {
+    font-size: 20px;
+  }
+
+  .admin-customers-header p {
+    font-size: 10px;
+  }
+
+  .admin-customers-toolbar {
+    padding: 9px;
+  }
+
+  .admin-customer-search {
+    height: 37px;
+    padding: 0 9px;
+  }
+
+  .admin-customer-search input {
+    font-size: 11px;
+  }
+
+  .admin-customers-toolbar > span {
+    font-size: 9px;
+  }
+
+  /* Table */
+  .admin-customers-table {
+    min-width: 780px;
+  }
+
+  .admin-customers-table th {
+    padding: 10px;
+    font-size: 8px;
+  }
+
+  .admin-customers-table td {
+    padding: 11px 10px;
+    font-size: 9px;
+  }
+
+  .admin-customer-avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .admin-customer-info {
+    gap: 7px;
+  }
+
+  .admin-customer-info strong {
+    font-size: 10px;
+  }
+
+  .admin-customer-info span {
+    font-size: 8px;
+  }
+
+  .admin-customer-status {
+    padding: 3px 6px;
+    font-size: 8px;
+  }
+
+  .admin-customer-view,
+  .admin-customer-delete {
+    width: 27px;
+    height: 27px;
+  }
+
+  /* Loading / Error */
+  .admin-customers-loading,
+  .admin-customers-error {
+    min-height: 350px;
+  }
+
+  .admin-customers-error {
+    padding: 20px 12px;
+  }
+
+  .admin-error-icon {
+    width: 54px;
+    height: 54px;
+    font-size: 23px;
+  }
+
+  .admin-customers-error h2 {
+    font-size: 17px;
+  }
+
+  .admin-customers-error p {
+    font-size: 11px;
+  }
+
+  /* Delete Modal */
+
+  .admin-delete-overlay {
+    padding: 10px;
+  }
+
+  .admin-delete-modal {
+    padding: 20px 13px;
+    border-radius: 13px;
+  }
+
+  .admin-delete-close {
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .admin-delete-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 21px;
+    margin-bottom: 13px;
+  }
+
+  .admin-delete-modal h2 {
+    font-size: 17px;
+  }
+
+  .admin-delete-modal > p {
+    font-size: 10px;
+  }
+
+  .admin-delete-customer-info {
+    gap: 8px;
+    padding: 9px;
+  }
+
+  .admin-delete-avatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .admin-delete-customer-info strong {
+    font-size: 11px;
+  }
+
+  .admin-delete-customer-info span {
+    font-size: 9px;
+  }
+
+  .admin-delete-warning {
+    padding: 9px;
+    margin-bottom: 15px;
+  }
+
+  .admin-delete-warning strong {
+    font-size: 10px;
+  }
+
+  .admin-delete-warning ul {
+    padding-left: 15px;
+    font-size: 9px;
+    line-height: 1.7;
+  }
+
+  .admin-delete-warning > span {
+    font-size: 8px;
+  }
+
+  .admin-delete-actions {
+    gap: 6px;
+  }
+
+  .admin-delete-cancel,
+  .admin-delete-confirm {
+    min-height: 36px;
+    padding: 0 7px;
+    font-size: 9px;
+    gap: 4px;
+  }
+}

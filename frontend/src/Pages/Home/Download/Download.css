@@ -1,0 +1,511 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary: #f97316;
+  --primary-hover: #ea580c;
+  --primary-light: #fff7ed;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --text-light: #9ca3af;
+  --bg-white: #ffffff;
+  --bg-light: #f9fafb;
+  --border: #e5e7eb;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.dl {
+  padding: 90px 20px;
+}
+
+/* Download */
+.download {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+  position: relative;
+}
+
+.download-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.download-title {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 80px;
+  letter-spacing: -0.5px;
+}
+
+.download-title span {
+  color: var(--primary);
+}
+
+/* 3 Column Layout */
+.download-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Phone */
+.download-phone {
+  display: flex;
+  justify-content: center;
+}
+
+.download-phone img {
+  width: 400px;
+  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.5));
+}
+
+/* Text */
+.download-text {
+  text-align: center;
+  max-width: 480px;
+  margin: auto;
+}
+
+.download-text p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #cbd5e1;
+  margin-bottom: 35px;
+}
+
+/* Store Buttons */
+.store-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.store-buttons img {
+  height: 52px;
+  transition: 0.3s ease;
+}
+
+.store-buttons img:hover {
+  transform: translateY(-5px);
+}
+
+/* Feature Cards */
+.download-features {
+  display: grid;
+  gap: 20px;
+}
+
+.dl-feature-card {
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  padding: 20px;
+  border-radius: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 0.3s ease;
+}
+
+.dl-feature-card span {
+  color: #fff;
+}
+
+.dl-feature-card:hover {
+  background: rgba(249, 115, 22, 0.15);
+  transform: translateY(-6px);
+}
+
+/* Faq */
+.faq {
+  background: var(--bg-light);
+}
+
+.faq-top {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.faq-top h2 {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.faq-btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.faq-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+}
+
+.faq-list {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  gap: 22px;
+}
+
+.faq-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq-card.active {
+  border-color: var(--primary);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.faq-card button {
+  width: 100%;
+  padding: 20px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease,
+    padding 0.3s ease;
+}
+
+.faq-card.active .faq-content {
+  max-height: 200px;
+  padding: 0 24px 22px;
+}
+
+.faq-content p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Animation */
+.fade-up {
+  animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Downlaod Responsive */
+@media (max-width: 1024px) {
+  .download-section {
+    padding: 80px 30px;
+  }
+
+  .download-title {
+    font-size: 38px;
+    margin-bottom: 60px;
+  }
+
+  .download-row {
+    grid-template-columns: 1.2fr 1.2fr 1fr;
+    gap: 35px;
+  }
+
+  .download-phone img {
+    width: 320px;
+  }
+
+  .download-text p {
+    font-size: 16px;
+  }
+
+  .store-buttons img {
+    height: 48px;
+  }
+
+  .faq-top {
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .faq-top h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .download-section {
+    padding: 70px 25px;
+  }
+
+  .download-title {
+    font-size: 34px;
+    margin-bottom: 50px;
+  }
+
+  .download-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .download-phone {
+    order: 1;
+  }
+
+  .download-phone img {
+    width: 280px;
+  }
+
+  .download-text {
+    order: 2;
+    max-width: 100%;
+  }
+
+  .download-text p {
+    font-size: 15px;
+  }
+
+  .download-features {
+    order: 3;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .store-buttons {
+    flex-wrap: wrap;
+  }
+
+  .faq-top {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .faq-top h2 {
+    font-size: 28px;
+  }
+
+  .faq-card button {
+    font-size: 15px;
+    padding: 18px 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .download-section {
+    padding: 60px 18px;
+  }
+
+  .download-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+    line-height: 1.3;
+  }
+
+  .download-phone img {
+    width: 220px;
+  }
+
+  .download-text p {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .store-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .store-buttons img {
+    height: 48px;
+  }
+
+  .download-features {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .dl-feature-card {
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .faq-top h2 {
+    font-size: 24px;
+  }
+
+  .faq-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .faq-card button {
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .faq-card.active .faq-content {
+    padding: 0 16px 18px;
+  }
+
+  .faq-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .download-section {
+    padding: 55px 15px;
+  }
+
+  .download-title {
+    font-size: 24px;
+  }
+
+  .download-phone img {
+    width: 200px;
+  }
+
+  .download-text p {
+    font-size: 13px;
+  }
+
+  .store-buttons img {
+    height: 44px;
+  }
+
+  .dl-feature-card {
+    padding: 14px;
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  .faq-top h2 {
+    font-size: 22px;
+  }
+
+  .faq-card button {
+    font-size: 13px;
+    padding: 15px;
+  }
+
+  .faq-content p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 320px) {
+  .download-section {
+    padding: 50px 12px;
+  }
+
+  .download-title {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .download-phone img {
+    width: 180px;
+  }
+
+  .download-text p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .store-buttons img {
+    height: 40px;
+  }
+
+  .dl-feature-card {
+    padding: 12px;
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .faq-top {
+    margin-bottom: 30px;
+  }
+
+  .faq-top h2 {
+    font-size: 20px;
+  }
+
+  .faq-btn {
+    font-size: 13px;
+    padding: 10px 18px;
+  }
+
+  .faq-card button {
+    font-size: 12px;
+    padding: 14px;
+  }
+
+  .faq-card.active .faq-content {
+    padding: 0 14px 16px;
+  }
+
+  .faq-content p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,1278 @@
+/* Booking Details Page */
+.booking-details-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  margin-top: 50px;
+  padding: 40px 40px 70px;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #1e293b;
+}
+
+/* Main Container */
+.booking-details-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Page Title */
+.booking-details-title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.page-label {
+  margin: 0 0 6px;
+  color: #f97316;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.booking-details-title h1 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 2rem;
+  font-weight: 750;
+}
+
+.booking-id {
+  margin: 7px 0 0;
+
+  color: #64748b;
+  font-size: 0.82rem;
+}
+
+.booking-id strong {
+  color: #475569;
+  font-weight: 600;
+}
+
+/* Status Badge */
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 15px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.status-badge svg {
+  width: 16px;
+  height: 16px;
+}
+
+.status-badge.pending {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+}
+
+.status-badge.confirmed {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.status-badge.ongoing {
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+}
+
+.status-badge.completed {
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.status-badge.cancelled {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+/* Card */
+.details-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 26px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+/* Car Details */
+.car-details-card {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.car-details-image {
+  width: 270px;
+  height: 170px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.car-details-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+}
+
+.car-image-placeholder {
+  font-size: 3rem;
+}
+
+.car-details-info {
+  flex: 1;
+}
+
+.car-details-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.car-details-heading h2 {
+  margin: 0 0 6px;
+  color: #1e293b;
+  font-size: 1.5rem;
+}
+
+.car-details-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.car-price {
+  color: #f97316;
+  font-size: 1.35rem;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.car-price span {
+  margin-left: 4px;
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.car-specifications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.car-specification {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.car-specification span {
+  color: #94a3b8;
+  font-size: 0.78rem;
+}
+
+.car-specification strong {
+  color: #334155;
+  font-size: 0.9rem;
+}
+
+/* Section Heading */
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 24px;
+}
+
+.section-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff7ed;
+  border-radius: 10px;
+  color: #f97316;
+}
+
+.section-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.section-heading h2 {
+  margin: 0 0 3px;
+  color: #1e293b;
+  font-size: 1.15rem;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+/* Rental Schedule */
+.schedule-container {
+  display: flex;
+  align-items: stretch;
+  padding: 5px 0;
+}
+
+.schedule-item {
+  flex: 1;
+  display: flex;
+  gap: 14px;
+  padding: 8px 5px;
+}
+
+.schedule-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.schedule-icon.pickup {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.schedule-icon.return {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.schedule-content {
+  min-width: 0;
+}
+
+.schedule-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #94a3b8;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.schedule-content h3 {
+  margin: 0 0 9px;
+  color: #334155;
+  font-size: 0.98rem;
+}
+
+.schedule-date,
+.schedule-time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 0.82rem;
+}
+
+.schedule-date svg,
+.schedule-time svg {
+  color: #f97316;
+  width: 14px;
+  height: 14px;
+}
+
+.schedule-line {
+  width: 1px;
+  margin: 5px 25px;
+  background: #e2e8f0;
+}
+
+/* ==========================================
+   RENTAL DURATION
+========================================== */
+
+.rental-duration {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 20px;
+  padding: 13px 15px;
+  background: #f8fafc;
+  border-radius: 10px;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.rental-duration svg {
+  color: #f97316;
+}
+
+.rental-duration strong {
+  margin-left: auto;
+  color: #1e293b;
+}
+
+/* Two Column Grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+/* Customer */
+.customer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.customer-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.customer-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  border-radius: 10px;
+  color: #f97316;
+}
+
+.customer-row div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.customer-row span {
+  color: #94a3b8;
+  font-size: 0.76rem;
+}
+
+.customer-row strong {
+  color: #334155;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+/* Payment Information */
+.payment-information {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.payment-info-row:first-child {
+  padding-top: 0;
+}
+
+.payment-info-row:last-child {
+  border-bottom: none;
+}
+
+.payment-info-row > span:first-child {
+  color: #64748b;
+  font-size: 0.87rem;
+}
+
+.payment-info-row strong {
+  color: #334155;
+  font-size: 0.88rem;
+  text-transform: capitalize;
+}
+
+.booking-status-text {
+  color: #f97316 !important;
+}
+
+/* Payment Status */
+.payment-status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.payment-status.pending {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.payment-status.paid {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.payment-status.failed {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.payment-status.refunded {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+/* Price Breakdown */
+.price-details-card {
+  margin-bottom: 22px;
+}
+
+.price-breakdown-details {
+  border-top: 1px solid #e2e8f0;
+}
+
+.price-detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #f1f5f9;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.price-detail-row strong {
+  color: #334155;
+}
+
+.price-total-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.price-total-row div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.price-total-row span {
+  color: #1e293b;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.price-total-row small {
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
+
+.price-total-row strong {
+  color: #f97316;
+  font-size: 1.55rem;
+}
+
+/* Notes */
+.notes-card {
+  padding-bottom: 22px;
+}
+
+.booking-notes {
+  margin: 0;
+  padding: 14px 16px;
+  background: #f8fafc;
+  border-left: 3px solid #f97316;
+  border-radius: 8px;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Security */
+.booking-security {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 28px 0;
+  padding: 16px 18px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 12px;
+  color: #9a3412;
+}
+
+.booking-security > svg {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+}
+
+.booking-security strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.88rem;
+}
+
+.booking-security p {
+  margin: 0;
+  color: #c2410c;
+  font-size: 0.78rem;
+}
+
+/* Actions */
+.booking-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.secondary-action,
+.primary-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.secondary-action {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+.secondary-action:hover {
+  border-color: #f97316;
+  color: #f97316;
+}
+
+.primary-action {
+  background: #f97316;
+  border: 1px solid #f97316;
+  color: #ffffff;
+}
+
+.primary-action:hover {
+  background: #ea580c;
+  border-color: #ea580c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(249, 115, 22, 0.2);
+}
+
+/* Loading Error */
+.booking-details-status {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.booking-details-status h3,
+.booking-details-status h2 {
+  margin: 12px 0 5px;
+  color: #1e293b;
+}
+
+.booking-details-status p {
+  margin: 0;
+  max-width: 450px;
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.booking-details-loader {
+  width: 38px;
+  height: 38px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #f97316;
+  border-radius: 50%;
+  animation: bookingDetailsSpin 0.8s linear infinite;
+}
+
+@keyframes bookingDetailsSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.status-error-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fef2f2;
+  border-radius: 50%;
+  color: #dc2626;
+}
+
+.status-error-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.back-to-bookings-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  padding: 12px 20px;
+  background: #f97316;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.back-to-bookings-btn:hover {
+  background: #ea580c;
+  transform: translateY(-1px);
+}
+
+.refund-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px;
+  margin-top: 20px;
+  border-radius: 12px;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+}
+
+.refund-notice svg {
+  flex-shrink: 0;
+  font-size: 20px;
+  margin-top: 2px;
+}
+
+.refund-notice strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.refund-notice span,
+.refund-notice p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.refund-row {
+  color: #059669;
+}
+
+/* Booking Details Page Responsive  */
+@media (max-width: 1024px) {
+  .booking-details-page {
+    padding: 22px 0 60px;
+  }
+
+  .booking-details-container {
+    padding: 0 20px;
+  }
+
+  .booking-details-title h1 {
+    font-size: 1.8rem;
+  }
+
+  .details-card {
+    padding: 22px;
+  }
+
+  .car-details-card {
+    gap: 20px;
+  }
+
+  .car-details-image {
+    width: 220px;
+    height: 145px;
+  }
+
+  .car-details-heading h2 {
+    font-size: 1.35rem;
+  }
+
+  .car-specifications {
+    gap: 22px;
+  }
+
+  .details-grid {
+    gap: 18px;
+  }
+
+  .refund-notice {
+    gap: 10px;
+    padding: 15px 16px;
+    margin-top: 18px;
+  }
+
+  .refund-notice svg {
+    font-size: 19px;
+  }
+
+  .refund-notice span,
+  .refund-notice p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-details-page {
+    padding: 20px 0 50px;
+  }
+
+  .booking-details-container {
+    padding: 0 18px;
+  }
+
+  .booking-details-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .booking-details-title h1 {
+    font-size: 1.6rem;
+  }
+
+  .status-badge {
+    align-self: flex-start;
+  }
+
+  .details-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .car-details-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .car-details-image {
+    width: 100%;
+    height: 220px;
+  }
+
+  .car-details-heading {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .car-price {
+    font-size: 1.25rem;
+  }
+
+  .car-specifications {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .schedule-container {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .schedule-line {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-actions {
+    flex-direction: column;
+  }
+
+  .primary-action,
+  .secondary-action {
+    width: 100%;
+  }
+
+  .refund-notice {
+    gap: 10px;
+    padding: 14px 15px;
+    margin-top: 16px;
+    border-radius: 10px;
+  }
+
+  .refund-notice svg {
+    font-size: 18px;
+  }
+
+  .refund-notice strong {
+    margin-bottom: 3px;
+    font-size: 14px;
+  }
+
+  .refund-notice span,
+  .refund-notice p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 425px) {
+  .booking-details-page {
+    padding: 16px 0 40px;
+  }
+
+  .booking-details-container {
+    padding: 0 14px;
+  }
+
+  .booking-details-title {
+    margin-bottom: 18px;
+  }
+
+  .booking-details-title h1 {
+    font-size: 1.35rem;
+  }
+
+  .booking-id {
+    font-size: 0.74rem;
+  }
+
+  .status-badge {
+    font-size: 0.72rem;
+    padding: 7px 12px;
+  }
+
+  .details-card {
+    padding: 16px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+  }
+
+  .section-heading {
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .section-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .section-heading h2 {
+    font-size: 1rem;
+  }
+
+  .section-heading p {
+    font-size: 0.72rem;
+  }
+
+  .car-details-image {
+    height: 180px;
+    border-radius: 12px;
+  }
+
+  .car-details-heading h2 {
+    font-size: 1.15rem;
+  }
+
+  .car-details-heading p {
+    font-size: 0.8rem;
+  }
+
+  .car-price {
+    font-size: 1.1rem;
+  }
+
+  .car-specifications {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .schedule-item {
+    gap: 10px;
+    padding: 4px 0;
+  }
+
+  .schedule-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .schedule-content h3 {
+    font-size: 0.88rem;
+  }
+
+  .schedule-date,
+  .schedule-time {
+    font-size: 0.72rem;
+  }
+
+  .rental-duration {
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 0.76rem;
+  }
+
+  .rental-duration strong {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .customer-details {
+    gap: 14px;
+  }
+
+  .customer-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .customer-row strong {
+    font-size: 0.82rem;
+  }
+
+  .payment-info-row {
+    padding: 11px 0;
+  }
+
+  .payment-info-row > span:first-child,
+  .payment-info-row strong {
+    font-size: 0.8rem;
+  }
+
+  .price-detail-row {
+    padding: 11px 0;
+    font-size: 0.8rem;
+  }
+
+  .price-total-row {
+    padding-top: 16px;
+  }
+
+  .price-total-row span {
+    font-size: 0.92rem;
+  }
+
+  .price-total-row strong {
+    font-size: 1.3rem;
+  }
+
+  .booking-notes {
+    padding: 12px;
+    font-size: 0.82rem;
+  }
+
+  .booking-security {
+    gap: 10px;
+    padding: 14px;
+    margin: 20px 0;
+  }
+
+  .booking-security strong {
+    font-size: 0.8rem;
+  }
+
+  .booking-security p {
+    font-size: 0.72rem;
+  }
+
+  .primary-action,
+  .secondary-action {
+    padding: 11px;
+    font-size: 0.82rem;
+  }
+
+  .refund-notice {
+    gap: 9px;
+    padding: 13px 14px;
+    margin-top: 15px;
+    border-radius: 10px;
+  }
+
+  .refund-notice svg {
+    font-size: 17px;
+    margin-top: 1px;
+  }
+
+  .refund-notice strong {
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+
+  .refund-notice span,
+  .refund-notice p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 375px) {
+  .booking-details-container {
+    padding: 0 12px;
+  }
+
+  .booking-details-title h1 {
+    font-size: 1.2rem;
+  }
+
+  .details-card {
+    padding: 14px;
+  }
+
+  .car-details-image {
+    height: 160px;
+  }
+
+  .car-details-heading h2 {
+    font-size: 1rem;
+  }
+
+  .car-price {
+    font-size: 1rem;
+  }
+
+  .section-heading h2 {
+    font-size: 0.92rem;
+  }
+
+  .schedule-content h3,
+  .customer-row strong {
+    font-size: 0.78rem;
+  }
+
+  .schedule-date,
+  .schedule-time,
+  .payment-info-row,
+  .price-detail-row {
+    font-size: 0.72rem;
+  }
+
+  .price-total-row strong {
+    font-size: 1.15rem;
+  }
+
+  .booking-security {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .refund-notice {
+    gap: 8px;
+    padding: 12px;
+    margin-top: 14px;
+    border-radius: 9px;
+  }
+
+  .refund-notice svg {
+    font-size: 16px;
+  }
+
+  .refund-notice strong {
+    font-size: 13px;
+  }
+
+  .refund-notice span,
+  .refund-notice p {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 320px) {
+  .booking-details-page {
+    padding: 12px 0 30px;
+  }
+
+  .booking-details-container {
+    padding: 0 10px;
+  }
+
+  .booking-details-title h1 {
+    font-size: 1.05rem;
+  }
+
+  .page-label {
+    font-size: 0.64rem;
+  }
+
+  .booking-id {
+    font-size: 0.66rem;
+  }
+
+  .details-card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .section-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .section-heading {
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .section-heading h2 {
+    font-size: 0.84rem;
+  }
+
+  .section-heading p {
+    font-size: 0.66rem;
+  }
+
+  .car-details-image {
+    height: 140px;
+  }
+
+  .car-details-heading h2 {
+    font-size: 0.9rem;
+  }
+
+  .car-details-heading p {
+    font-size: 0.72rem;
+  }
+
+  .car-price {
+    font-size: 0.9rem;
+  }
+
+  .car-specification span {
+    font-size: 0.68rem;
+  }
+
+  .car-specification strong {
+    font-size: 0.78rem;
+  }
+
+  .schedule-icon,
+  .customer-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .schedule-content h3,
+  .customer-row strong {
+    font-size: 0.72rem;
+  }
+
+  .schedule-date,
+  .schedule-time {
+    font-size: 0.64rem;
+  }
+
+  .rental-duration {
+    padding: 10px;
+    font-size: 0.68rem;
+  }
+
+  .payment-info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .price-detail-row {
+    font-size: 0.68rem;
+  }
+
+  .price-total-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .price-total-row strong {
+    font-size: 1rem;
+  }
+
+  .booking-notes {
+    font-size: 0.72rem;
+    line-height: 1.5;
+  }
+
+  .booking-security {
+    padding: 12px;
+  }
+
+  .booking-security strong {
+    font-size: 0.72rem;
+  }
+
+  .booking-security p {
+    font-size: 0.66rem;
+  }
+
+  .primary-action,
+  .secondary-action {
+    padding: 10px;
+    font-size: 0.74rem;
+  }
+
+  .refund-notice {
+    gap: 7px;
+    padding: 11px;
+    margin-top: 12px;
+    border-radius: 8px;
+  }
+
+  .refund-notice svg {
+    font-size: 15px;
+  }
+
+  .refund-notice strong {
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .refund-notice span,
+  .refund-notice p {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+}

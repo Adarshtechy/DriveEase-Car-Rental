@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary: #f97316;
+  --primary-hover: #ea580c;
+  --primary-light: #fff7ed;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --text-light: #9ca3af;
+  --bg-white: #ffffff;
+  --bg-light: #f9fafb;
+  --border: #e5e7eb;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.sec {
+  padding: 90px 20px;
+  background: #fff;
+}
+
+.alt {
+  background: #f9fafb;
+}
+
+/* Header */
+.wc-head {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.wc-head h2 {
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.wc-head p {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* Feature Grid */
+.wc-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+.wc-card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.wc-card:hover {
+  transform: translateY(-6px);
+}
+
+.wc-icon {
+  font-size: 28px;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+
+.wc-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.wc-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* Button */
+.wc-btn-wrap {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.wc-btn {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.wc-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+}
+
+/* Steps */
+.wk-grid {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.wk-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.wk-card:hover {
+  transform: translateY(-6px);
+}
+
+.wk-no {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.wk-icon {
+  font-size: 30px;
+  color: var(--primary);
+  margin: 20px 0 12px;
+}
+
+.wk-card h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.wk-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* Animation */
+.fade-up {
+  animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Why Choose Responsive */
+@media (max-width: 1024px) {
+  .sec {
+    padding: 80px 30px;
+  }
+
+  .alt {
+    padding: 70px 30px;
+  }
+
+  .wc-head {
+    margin-bottom: 45px;
+  }
+
+  .wc-head h2 {
+    font-size: 32px;
+  }
+
+  .wc-head p {
+    font-size: 15px;
+  }
+
+  .wc-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .wc-card {
+    padding: 24px;
+  }
+
+  .wk-grid {
+    gap: 24px;
+  }
+
+  .wk-card {
+    width: 240px;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec {
+    padding: 70px 25px;
+  }
+
+  .alt {
+    padding: 60px 25px;
+  }
+
+  .wc-head {
+    margin-bottom: 40px;
+  }
+
+  .wc-head h2 {
+    font-size: 28px;
+  }
+
+  .wc-head p {
+    font-size: 14px;
+  }
+
+  .wc-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .wc-card {
+    padding: 22px;
+  }
+
+  .wc-icon {
+    font-size: 26px;
+  }
+
+  .wc-card h3 {
+    font-size: 17px;
+  }
+
+  .wk-grid {
+    gap: 20px;
+  }
+
+  .wk-card {
+    width: 220px;
+    padding: 22px;
+  }
+
+  .wk-icon {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 425px) {
+  .sec {
+    padding: 60px 18px;
+  }
+
+  .alt {
+    padding: 50px 18px;
+  }
+
+  .wc-head {
+    margin-bottom: 35px;
+  }
+
+  .wc-head h2 {
+    font-size: 24px;
+  }
+
+  .wc-head p {
+    font-size: 14px;
+  }
+
+  .wc-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .wc-card {
+    padding: 20px;
+  }
+
+  .wc-icon {
+    font-size: 24px;
+  }
+
+  .wc-card h3 {
+    font-size: 17px;
+  }
+
+  .wc-btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+  }
+
+  .wk-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .wk-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 375px) {
+  .sec {
+    padding: 55px 15px;
+  }
+
+  .alt {
+    padding: 45px 15px;
+  }
+
+  .wc-head h2 {
+    font-size: 22px;
+  }
+
+  .wc-head p {
+    font-size: 13px;
+  }
+
+  .wc-card {
+    padding: 18px;
+  }
+
+  .wc-icon {
+    font-size: 22px;
+  }
+
+  .wc-card h3 {
+    font-size: 16px;
+  }
+
+  .wc-card p {
+    font-size: 13px;
+  }
+
+  .wc-btn {
+    font-size: 15px;
+    padding: 13px;
+  }
+
+  .wk-card {
+    padding: 20px;
+  }
+
+  .wk-no {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+  }
+
+  .wk-icon {
+    font-size: 26px;
+  }
+
+  .wk-card h3 {
+    font-size: 16px;
+  }
+
+  .wk-card p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 320px) {
+  .sec {
+    padding: 50px 12px;
+  }
+
+  .alt {
+    padding: 40px 12px;
+  }
+
+  .wc-head {
+    margin-bottom: 30px;
+  }
+
+  .wc-head h2 {
+    font-size: 20px;
+  }
+
+  .wc-head p {
+    font-size: 12px;
+  }
+
+  .wc-card {
+    padding: 16px;
+  }
+
+  .wc-icon {
+    font-size: 20px;
+  }
+
+  .wc-card h3 {
+    font-size: 15px;
+  }
+
+  .wc-card p {
+    font-size: 12px;
+  }
+
+  .wc-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .wk-card {
+    padding: 18px;
+  }
+
+  .wk-no {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .wk-icon {
+    font-size: 24px;
+  }
+
+  .wk-card h3 {
+    font-size: 15px;
+  }
+
+  .wk-card p {
+    font-size: 12px;
+  }
+}

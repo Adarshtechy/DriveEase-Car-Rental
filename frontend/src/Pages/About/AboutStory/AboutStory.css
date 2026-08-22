@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary: #f97316;
+  --primary-hover: #ea580c;
+  --primary-light: #fff7ed;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --text-light: #9ca3af;
+  --bg-white: #ffffff;
+  --bg-light: #f9fafb;
+  --border: #e5e7eb;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.sec {
+  padding: 90px 20px;
+  background: #fff;
+}
+
+.alt {
+  background: #f9fafb;
+}
+
+/* Story */
+.as-wrap {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.as-img {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.as-img img {
+  width: 100%;
+  display: block;
+}
+
+.as-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: var(--primary);
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.as-badge strong {
+  font-size: 28px;
+  display: block;
+}
+
+.as-badge span {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.as-text h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 10px 0 20px;
+  color: var(--text-primary);
+}
+
+.as-text p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.tag {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.as-stats {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-ic {
+  font-size: 26px;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.stat h4 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.stat span {
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+/* Values */
+.as-head {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.as-head h2 {
+  font-size: 34px;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.val-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 22px;
+}
+
+.val-card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.val-card:hover {
+  transform: translateY(-6px);
+}
+
+.val-ic {
+  font-size: 30px;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.val-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.val-card p {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+/* Animation */
+.fade-up {
+  animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About Story Responsive */
+@media (max-width: 1024px) {
+  .sec {
+    padding: 80px 30px;
+  }
+
+  .as-wrap {
+    gap: 35px;
+  }
+
+  .as-text h2 {
+    font-size: 32px;
+  }
+
+  .as-text p {
+    font-size: 15px;
+  }
+
+  .as-stats {
+    gap: 18px;
+  }
+
+  .val-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .val-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec {
+    padding: 70px 25px;
+  }
+
+  .as-wrap {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .as-img {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  .as-badge {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .as-text h2 {
+    font-size: 30px;
+  }
+
+  .as-text p {
+    font-size: 15px;
+  }
+
+  .as-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .as-head {
+    margin-bottom: 40px;
+  }
+
+  .as-head h2 {
+    font-size: 30px;
+  }
+
+  .val-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 425px) {
+  .sec {
+    padding: 60px 18px;
+  }
+
+  .tag {
+    font-size: 12px;
+  }
+
+  .as-text h2 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .as-text p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .as-badge {
+    padding: 12px 16px;
+  }
+
+  .as-badge strong {
+    font-size: 22px;
+  }
+
+  .as-badge span {
+    font-size: 11px;
+  }
+
+  .as-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .stat-ic {
+    font-size: 22px;
+  }
+
+  .stat h4 {
+    font-size: 18px;
+  }
+
+  .stat span {
+    font-size: 12px;
+  }
+
+  .as-head h2 {
+    font-size: 26px;
+  }
+
+  .val-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .val-card {
+    padding: 22px;
+  }
+
+  .val-ic {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 375px) {
+  .sec {
+    padding: 55px 15px;
+  }
+
+  .tag {
+    font-size: 11px;
+  }
+
+  .as-text h2 {
+    font-size: 24px;
+  }
+
+  .as-text p {
+    font-size: 13px;
+  }
+
+  .as-badge {
+    padding: 10px 14px;
+  }
+
+  .as-badge strong {
+    font-size: 20px;
+  }
+
+  .as-stats {
+    gap: 14px;
+  }
+
+  .stat-ic {
+    font-size: 20px;
+  }
+
+  .stat h4 {
+    font-size: 17px;
+  }
+
+  .stat span {
+    font-size: 11px;
+  }
+
+  .as-head h2 {
+    font-size: 24px;
+  }
+
+  .val-card {
+    padding: 20px;
+  }
+
+  .val-card h3 {
+    font-size: 17px;
+  }
+
+  .val-card p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 320px) {
+  .sec {
+    padding: 50px 12px;
+  }
+
+  .tag {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .as-text h2 {
+    font-size: 22px;
+  }
+
+  .as-text p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .as-badge {
+    padding: 8px 12px;
+    bottom: 12px;
+  }
+
+  .as-badge strong {
+    font-size: 18px;
+  }
+
+  .as-badge span {
+    font-size: 10px;
+  }
+
+  .as-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .stat-ic {
+    font-size: 18px;
+  }
+
+  .stat h4 {
+    font-size: 16px;
+  }
+
+  .stat span {
+    font-size: 11px;
+  }
+
+  .as-head {
+    margin-bottom: 30px;
+  }
+
+  .as-head h2 {
+    font-size: 22px;
+  }
+
+  .val-card {
+    padding: 18px;
+  }
+
+  .val-ic {
+    font-size: 24px;
+  }
+
+  .val-card h3 {
+    font-size: 16px;
+  }
+
+  .val-card p {
+    font-size: 12px;
+  }
+}

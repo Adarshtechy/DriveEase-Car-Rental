@@ -1,0 +1,1522 @@
+/* Admin Dashboard */
+.admin-dashboard-page {
+  min-height: 100%;
+  padding: 32px;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* Header */
+.admin-page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.admin-header-content {
+  min-width: 0;
+}
+
+.admin-page-label {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 8px;
+  color: #f97316;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.admin-page-header h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.15;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+  color: #0f172a;
+}
+
+.admin-page-header p {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Header Actions */
+.admin-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-refresh-button {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admin-refresh-button svg {
+  font-size: 17px;
+}
+
+.admin-refresh-button:hover:not(:disabled) {
+  background: #fff7ed;
+  color: #f97316;
+  border-color: #fed7aa;
+  transform: translateY(-1px);
+}
+
+.admin-refresh-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.admin-refresh-button.refreshing svg {
+  animation: admin-spin 0.8s linear infinite;
+}
+
+@keyframes admin-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.admin-header-date {
+  min-width: 150px;
+  padding: 10px 16px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: right;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+}
+
+.admin-header-date span {
+  font-size: 10px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+}
+
+.admin-header-date strong {
+  font-size: 12px;
+  color: #334155;
+}
+
+/* Status Card */
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+/* Stat Card */
+.admin-stat-card {
+  min-width: 0;
+  padding: 21px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.035);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: #dbe3ec;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+}
+
+.admin-stat-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+
+.admin-stat-icon.cars {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.admin-stat-icon.bookings {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.admin-stat-icon.customers {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.admin-stat-icon.revenue {
+  background: #faf5ff;
+  color: #9333ea;
+}
+
+.admin-stat-content {
+  min-width: 0;
+}
+
+.admin-stat-card span {
+  display: block;
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.admin-stat-card h2 {
+  margin: 5px 0 4px;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 750;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-stat-card small {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+.admin-stat-card small svg {
+  font-size: 10px;
+}
+
+/* Dashboard Grid */
+.admin-dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(300px, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+/* Dashboard Card */
+.admin-dashboard-card {
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.035);
+}
+
+/* Card Header */
+.admin-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.admin-card-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #f97316;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.admin-card-header h3 {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.admin-card-header p {
+  margin: 5px 0 0;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.admin-view-all {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  color: #f97316;
+  background: transparent;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.admin-view-all:hover {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.admin-view-all svg {
+  font-size: 13px;
+}
+
+/* Booking List */
+.admin-booking-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-booking-item {
+  min-width: 0;
+  padding: 15px 0;
+  border-top: 1px solid #f1f5f9;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(90px, 1fr) auto;
+  align-items: center;
+  gap: 15px;
+}
+
+.admin-booking-item:first-child {
+  border-top: none;
+  padding-top: 5px;
+}
+
+/* Booking Main */
+.admin-booking-main {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-booking-car {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+  background: #fff7ed;
+  color: #f97316;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-booking-car svg {
+  font-size: 18px;
+}
+
+.admin-booking-car img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-booking-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-booking-main strong {
+  overflow: hidden;
+  color: #1e293b;
+  font-size: 13px;
+  font-weight: 650;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.admin-booking-main span {
+  overflow: hidden;
+  color: #94a3b8;
+  font-size: 11px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Booking Middle */
+.admin-booking-middle {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.admin-booking-date {
+  color: #64748b;
+  font-size: 10px;
+}
+
+.admin-booking-status {
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1;
+}
+
+/* Booking Status Colors */
+.admin-booking-status.pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.admin-booking-status.confirmed {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.admin-booking-status.ongoing {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.admin-booking-status.completed {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.admin-booking-status.cancelled {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Booking Amount */
+.admin-booking-amount {
+  color: #0f172a;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Top Cars */
+.admin-top-cars {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-top-car {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 0;
+  border-top: 1px solid #f1f5f9;
+}
+
+.admin-top-car:first-child {
+  border-top: none;
+  padding-top: 5px;
+}
+
+.admin-car-rank {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.admin-top-car:first-child .admin-car-rank {
+  background: #fff7ed;
+  border-color: #fed7aa;
+  color: #f97316;
+}
+
+.admin-car-details {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-car-details strong {
+  overflow: hidden;
+  color: #1e293b;
+  font-size: 13px;
+  font-weight: 650;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.admin-car-details span {
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+.admin-car-revenue {
+  color: #0f172a;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Empty State */
+.admin-empty-state {
+  min-height: 180px;
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.admin-empty-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
+  border-radius: 13px;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.admin-empty-state h4 {
+  margin: 0;
+  color: #334155;
+  font-size: 13px;
+}
+
+.admin-empty-state p {
+  margin: 5px 0 0;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+/* Loading State */
+.admin-dashboard-loading {
+  min-height: 420px;
+  padding: 40px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.035);
+}
+
+.admin-loading-spinner {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 14px;
+  color: #f97316;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-loading-spinner svg {
+  font-size: 22px;
+  animation: admin-spin 0.8s linear infinite;
+}
+
+.admin-dashboard-loading h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 18px;
+}
+
+.admin-dashboard-loading p {
+  margin: 7px 0 0;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+/* Error State */
+.admin-dashboard-error {
+  min-height: 420px;
+  padding: 40px;
+  background: #ffffff;
+  border: 1px solid #fee2e2;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.035);
+}
+
+.admin-error-icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 16px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 15px;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+}
+
+.admin-dashboard-error h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 20px;
+}
+
+.admin-dashboard-error p {
+  max-width: 500px;
+  margin: 8px 0 20px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.admin-retry-button {
+  height: 40px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 9px;
+  background: #f97316;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admin-retry-button:hover {
+  background: #ea580c;
+  transform: translateY(-1px);
+}
+
+.admin-retry-button svg {
+  font-size: 14px;
+}
+
+/* Admin Dashboard Responsive   */
+@media (max-width: 1024px) {
+  .admin-dashboard-page {
+    padding: 26px;
+  }
+
+  /* Header */
+  .admin-page-header {
+    gap: 18px;
+    margin-bottom: 25px;
+  }
+
+  .admin-page-header h1 {
+    font-size: 28px;
+  }
+
+  .admin-page-header p {
+    font-size: 13px;
+  }
+
+  .admin-header-date {
+    min-width: 140px;
+    padding: 9px 13px;
+  }
+
+  /* Stats */
+  .admin-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .admin-stat-card {
+    padding: 18px;
+  }
+
+  .admin-stat-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 19px;
+  }
+
+  .admin-stat-card h2 {
+    font-size: 22px;
+  }
+
+  /* Dashboard Content */
+  .admin-dashboard-grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(260px, 1fr);
+    gap: 18px;
+  }
+
+  .admin-dashboard-card {
+    padding: 19px;
+  }
+
+  /* Booking */
+  .admin-booking-item {
+    grid-template-columns: minmax(0, 1.4fr) minmax(85px, 0.9fr) auto;
+    gap: 10px;
+  }
+
+  .admin-booking-main {
+    gap: 9px;
+  }
+
+  .admin-booking-car {
+    width: 40px;
+    height: 40px;
+  }
+
+  .admin-booking-main strong {
+    font-size: 12px;
+  }
+
+  .admin-booking-main span {
+    font-size: 10px;
+  }
+
+  .admin-booking-amount {
+    font-size: 11px;
+  }
+
+  /* Top Cars */
+  .admin-top-car {
+    gap: 10px;
+  }
+
+  .admin-car-rank {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard-page {
+    padding: 22px;
+  }
+
+  /* Header */
+  .admin-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+
+  .admin-header-content {
+    width: 100%;
+  }
+
+  .admin-page-header h1 {
+    font-size: 26px;
+  }
+
+  .admin-page-header p {
+    font-size: 12px;
+  }
+
+  .admin-header-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .admin-header-date {
+    min-width: 150px;
+  }
+
+  /* Stats */
+  .admin-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .admin-stat-card {
+    padding: 16px;
+    gap: 12px;
+    border-radius: 14px;
+  }
+
+  .admin-stat-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 11px;
+    font-size: 18px;
+  }
+
+  .admin-stat-card span {
+    font-size: 10px;
+  }
+
+  .admin-stat-card h2 {
+    margin: 4px 0;
+    font-size: 21px;
+  }
+
+  .admin-stat-card small {
+    font-size: 9px;
+  }
+
+  /* Main Dashboard */
+  .admin-dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .admin-dashboard-card {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  /* Card Header */
+  .admin-card-header {
+    margin-bottom: 15px;
+  }
+
+  .admin-card-header h3 {
+    font-size: 16px;
+  }
+
+  .admin-card-header p {
+    font-size: 11px;
+  }
+
+  /* Booking */
+  .admin-booking-item {
+    grid-template-columns: minmax(0, 1.5fr) minmax(90px, 1fr) auto;
+    gap: 12px;
+    padding: 14px 0;
+  }
+
+  .admin-booking-car {
+    width: 40px;
+    height: 40px;
+  }
+
+  .admin-booking-middle {
+    gap: 5px;
+  }
+
+  /* Top Cars */
+  .admin-top-car {
+    padding: 13px 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .admin-dashboard-page {
+    padding: 15px;
+  }
+
+  /* Header */
+  .admin-page-header {
+    gap: 13px;
+    margin-bottom: 18px;
+  }
+
+  .admin-page-label {
+    margin-bottom: 5px;
+    font-size: 9px;
+  }
+
+  .admin-page-header h1 {
+    font-size: 23px;
+  }
+
+  .admin-page-header p {
+    margin-top: 5px;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .admin-header-actions {
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .admin-refresh-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .admin-header-date {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 11px;
+    border-radius: 10px;
+  }
+
+  .admin-header-date span {
+    font-size: 9px;
+  }
+
+  .admin-header-date strong {
+    font-size: 11px;
+  }
+
+  /* Stats */
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 9px;
+    margin-bottom: 15px;
+  }
+
+  .admin-stat-card {
+    min-height: 76px;
+    padding: 13px;
+    gap: 11px;
+    border-radius: 12px;
+  }
+
+  .admin-stat-icon {
+    width: 39px;
+    height: 39px;
+    border-radius: 9px;
+    font-size: 17px;
+  }
+
+  .admin-stat-card span {
+    font-size: 10px;
+  }
+
+  .admin-stat-card h2 {
+    margin: 3px 0;
+    font-size: 19px;
+  }
+
+  .admin-stat-card small {
+    font-size: 8px;
+  }
+
+  .admin-stat-card small svg {
+    font-size: 8px;
+  }
+
+  /* Main Cards */
+  .admin-dashboard-grid {
+    gap: 12px;
+  }
+
+  .admin-dashboard-card {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  /* Card Header */
+  .admin-card-header {
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .admin-card-label {
+    margin-bottom: 4px;
+    font-size: 8px;
+  }
+
+  .admin-card-header h3 {
+    font-size: 15px;
+  }
+
+  .admin-card-header p {
+    margin-top: 3px;
+    font-size: 10px;
+  }
+
+  .admin-view-all {
+    padding: 5px 6px;
+    font-size: 9px;
+  }
+
+  .admin-view-all svg {
+    font-size: 11px;
+  }
+
+  /* Recent Bookings */
+  .admin-booking-item {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px;
+    padding: 12px 0;
+  }
+
+  .admin-booking-main {
+    gap: 9px;
+  }
+
+  .admin-booking-car {
+    width: 37px;
+    height: 37px;
+    border-radius: 9px;
+  }
+
+  .admin-booking-car svg {
+    font-size: 16px;
+  }
+
+  .admin-booking-info {
+    gap: 3px;
+  }
+
+  .admin-booking-main strong {
+    font-size: 11px;
+  }
+
+  .admin-booking-main span {
+    font-size: 9px;
+  }
+
+  /* Put date/status below booking info */
+  .admin-booking-middle {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+    padding-left: 46px;
+  }
+
+  .admin-booking-date {
+    font-size: 9px;
+  }
+
+  .admin-booking-status {
+    padding: 4px 7px;
+    font-size: 8px;
+  }
+
+  .admin-booking-amount {
+    align-self: center;
+    font-size: 10px;
+  }
+
+  /* Top Cars */
+  .admin-top-car {
+    gap: 9px;
+    padding: 12px 0;
+  }
+
+  .admin-car-rank {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    font-size: 10px;
+  }
+
+  .admin-car-details {
+    gap: 3px;
+  }
+
+  .admin-car-details strong {
+    font-size: 11px;
+  }
+
+  .admin-car-details span {
+    font-size: 9px;
+  }
+
+  .admin-car-revenue {
+    font-size: 10px;
+  }
+
+  /* Empty State */
+  .admin-empty-state {
+    min-height: 150px;
+    padding: 20px 10px;
+  }
+
+  .admin-empty-icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 9px;
+    font-size: 18px;
+  }
+
+  .admin-empty-state h4 {
+    font-size: 12px;
+  }
+
+  .admin-empty-state p {
+    font-size: 10px;
+  }
+
+  /* Loading / Error */
+  .admin-dashboard-loading,
+  .admin-dashboard-error {
+    min-height: 350px;
+    padding: 25px 15px;
+    border-radius: 14px;
+  }
+
+  .admin-dashboard-loading h3 {
+    font-size: 16px;
+  }
+
+  .admin-dashboard-loading p {
+    font-size: 10px;
+  }
+
+  .admin-dashboard-error h2 {
+    font-size: 17px;
+  }
+
+  .admin-dashboard-error p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 375px) {
+  .admin-dashboard-page {
+    padding: 12px;
+  }
+
+  /* Header */
+  .admin-page-header {
+    margin-bottom: 15px;
+  }
+
+  .admin-page-header h1 {
+    font-size: 21px;
+  }
+
+  .admin-page-header p {
+    font-size: 10px;
+  }
+
+  .admin-header-actions {
+    gap: 6px;
+  }
+
+  .admin-refresh-button {
+    width: 37px;
+    height: 37px;
+  }
+
+  .admin-refresh-button svg {
+    font-size: 15px;
+  }
+
+  .admin-header-date {
+    padding: 7px 9px;
+  }
+
+  .admin-header-date span {
+    font-size: 8px;
+  }
+
+  .admin-header-date strong {
+    font-size: 10px;
+  }
+
+  /* Stats */
+  .admin-stat-card {
+    min-height: 70px;
+    padding: 11px;
+    gap: 9px;
+  }
+
+  .admin-stat-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .admin-stat-card span {
+    font-size: 9px;
+  }
+
+  .admin-stat-card h2 {
+    font-size: 18px;
+  }
+
+  .admin-stat-card small {
+    display: none;
+  }
+
+  /* Cards */
+  .admin-dashboard-card {
+    padding: 12px;
+  }
+
+  .admin-card-header h3 {
+    font-size: 14px;
+  }
+
+  .admin-card-header p {
+    font-size: 9px;
+  }
+
+  .admin-view-all {
+    font-size: 8px;
+    padding: 4px 5px;
+  }
+
+  /* Booking */
+  .admin-booking-item {
+    padding: 10px 0;
+    gap: 6px;
+  }
+
+  .admin-booking-car {
+    width: 34px;
+    height: 34px;
+  }
+
+  .admin-booking-main {
+    gap: 7px;
+  }
+
+  .admin-booking-main strong {
+    font-size: 10px;
+  }
+
+  .admin-booking-main span {
+    font-size: 8px;
+  }
+
+  .admin-booking-middle {
+    padding-left: 41px;
+    gap: 5px;
+  }
+
+  .admin-booking-date {
+    font-size: 8px;
+  }
+
+  .admin-booking-status {
+    padding: 3px 6px;
+    font-size: 7px;
+  }
+
+  .admin-booking-amount {
+    font-size: 9px;
+  }
+
+  /* Top Cars */
+  .admin-top-car {
+    gap: 7px;
+    padding: 10px 0;
+  }
+
+  .admin-car-rank {
+    width: 27px;
+    height: 27px;
+    font-size: 9px;
+  }
+
+  .admin-car-details strong {
+    font-size: 10px;
+  }
+
+  .admin-car-details span {
+    font-size: 8px;
+  }
+
+  .admin-car-revenue {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 320px) {
+  .admin-dashboard-page {
+    padding: 9px;
+  }
+
+  /* Header */
+  .admin-page-header {
+    gap: 10px;
+    margin-bottom: 13px;
+  }
+
+  .admin-page-label {
+    font-size: 8px;
+    letter-spacing: 0.8px;
+  }
+
+  .admin-page-header h1 {
+    font-size: 19px;
+  }
+
+  .admin-page-header p {
+    font-size: 9px;
+  }
+
+  .admin-header-actions {
+    gap: 5px;
+  }
+
+  .admin-refresh-button {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+  }
+
+  .admin-refresh-button svg {
+    font-size: 14px;
+  }
+
+  .admin-header-date {
+    padding: 6px 8px;
+    border-radius: 8px;
+  }
+
+  .admin-header-date span {
+    font-size: 7px;
+  }
+
+  .admin-header-date strong {
+    font-size: 9px;
+  }
+
+  /* Stats */
+  .admin-stats-grid {
+    gap: 7px;
+    margin-bottom: 11px;
+  }
+
+  .admin-stat-card {
+    min-height: 64px;
+    padding: 9px;
+    gap: 8px;
+    border-radius: 10px;
+  }
+
+  .admin-stat-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 7px;
+    font-size: 14px;
+  }
+
+  .admin-stat-card span {
+    font-size: 8px;
+  }
+
+  .admin-stat-card h2 {
+    margin-top: 2px;
+    font-size: 16px;
+  }
+
+  /* Main Cards */
+  .admin-dashboard-grid {
+    gap: 9px;
+  }
+
+  .admin-dashboard-card {
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .admin-card-header {
+    gap: 5px;
+    margin-bottom: 9px;
+  }
+
+  .admin-card-label {
+    font-size: 7px;
+  }
+
+  .admin-card-header h3 {
+    font-size: 13px;
+  }
+
+  .admin-card-header p {
+    font-size: 8px;
+  }
+
+  .admin-view-all {
+    padding: 3px 4px;
+    font-size: 7px;
+  }
+
+  .admin-view-all svg {
+    font-size: 9px;
+  }
+
+  /* Booking */
+  .admin-booking-item {
+    padding: 9px 0;
+  }
+
+  .admin-booking-car {
+    width: 31px;
+    height: 31px;
+    border-radius: 7px;
+  }
+
+  .admin-booking-car svg {
+    font-size: 14px;
+  }
+
+  .admin-booking-main {
+    gap: 6px;
+  }
+
+  .admin-booking-main strong {
+    font-size: 9px;
+  }
+
+  .admin-booking-main span {
+    font-size: 7px;
+  }
+
+  .admin-booking-middle {
+    padding-left: 37px;
+    gap: 4px;
+  }
+
+  .admin-booking-date {
+    font-size: 7px;
+  }
+
+  .admin-booking-status {
+    padding: 3px 5px;
+    font-size: 6px;
+  }
+
+  .admin-booking-amount {
+    font-size: 8px;
+  }
+
+  /* Top Cars */
+  .admin-top-car {
+    gap: 6px;
+    padding: 9px 0;
+  }
+
+  .admin-car-rank {
+    width: 25px;
+    height: 25px;
+    border-radius: 7px;
+    font-size: 8px;
+  }
+
+  .admin-car-details {
+    gap: 2px;
+  }
+
+  .admin-car-details strong {
+    font-size: 9px;
+  }
+
+  .admin-car-details span {
+    font-size: 7px;
+  }
+
+  .admin-car-revenue {
+    font-size: 8px;
+  }
+
+  /* Empty State */
+  .admin-empty-state {
+    min-height: 130px;
+    padding: 15px 8px;
+  }
+
+  .admin-empty-icon {
+    width: 37px;
+    height: 37px;
+    margin-bottom: 7px;
+    font-size: 16px;
+  }
+
+  .admin-empty-state h4 {
+    font-size: 10px;
+  }
+
+  .admin-empty-state p {
+    font-size: 8px;
+  }
+
+  /* Loading / Error */
+  .admin-dashboard-loading,
+  .admin-dashboard-error {
+    min-height: 300px;
+    padding: 20px 10px;
+    border-radius: 12px;
+  }
+
+  .admin-loading-spinner {
+    width: 44px;
+    height: 44px;
+  }
+
+  .admin-dashboard-loading h3 {
+    font-size: 14px;
+  }
+
+  .admin-dashboard-loading p {
+    font-size: 9px;
+  }
+
+  .admin-dashboard-error h2 {
+    font-size: 15px;
+  }
+
+  .admin-dashboard-error p {
+    font-size: 9px;
+  }
+
+  .admin-retry-button {
+    height: 36px;
+    padding: 0 12px;
+    font-size: 10px;
+  }
+}
