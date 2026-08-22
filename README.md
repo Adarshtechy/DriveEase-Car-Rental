@@ -63,36 +63,6 @@ Razorpay test credentials can be used during development without processing real
 
 ---
 
-## 🖥️ Screenshots
-
-> Add your project screenshots here after uploading them to the repository.
-
-### Home Page
-
-![DriveEase Home](./screenshots/home.png)
-
-### Cars Page
-
-![DriveEase Cars](./screenshots/cars.png)
-
-### Car Details
-
-![DriveEase Car Details](./screenshots/car-details.png)
-
-### Customer Dashboard
-
-![DriveEase Dashboard](./screenshots/dashboard.png)
-
-### Admin Dashboard
-
-![DriveEase Admin Dashboard](./screenshots/admin-dashboard.png)
-
-### Booking & Payment
-
-![DriveEase Booking](./screenshots/booking.png)
-
----
-
 ## 🧰 Tech Stack
 
 ### Frontend
@@ -116,7 +86,6 @@ Razorpay test credentials can be used during development without processing real
 | Mongoose   | MongoDB object modeling |
 | JWT        | Authentication          |
 | bcrypt     | Password hashing        |
-| Nodemailer | Email functionality     |
 | Razorpay   | Payment processing      |
 
 ---
