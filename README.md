@@ -98,31 +98,79 @@ DriveEase-Car-Rental/
 ├── frontend/
 │   ├── public/
 │   ├── src/
-│   │   ├── assets/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── layouts/
-│   │   ├── routes/
-│   │   ├── services/
+│   │   ├── Components/
+│   │   │   ├── AdminDashboardLayout/
+│   │   │   ├── AdminRoute/
+│   │   │   ├── Card/
+│   │   │   ├── Carousel/
+│   │   │   ├── DashboardLayout/
+│   │   │   ├── Filters/
+│   │   │   ├── Footer/
+│   │   │   ├── Navbar/
+│   │   │   └── ProtectedRoute/
+│   │   │
+│   │   ├── Pages/
+│   │   │   ├── About/
+│   │   │   ├── Admin/
+│   │   │   ├── Booking/
+│   │   │   ├── BookingDetails/
+│   │   │   ├── CarDetails/
+│   │   │   ├── Cars/
+│   │   │   ├── Contact/
+│   │   │   ├── Customer/
+│   │   │   ├── ForgotPassword/
+│   │   │   ├── Home/
+│   │   │   ├── Login/
+│   │   │   ├── Register/
+│   │   │   └── Services/
+│   │   │
 │   │   ├── App.jsx
 │   │   └── main.jsx
 │   │
+│   ├── .env
+│   ├── .gitignore
+│   ├── index.html
 │   ├── package.json
 │   └── vite.config.js
 │
 ├── backend/
 │   ├── config/
+│   │   └── db.js
+│   │
 │   ├── controllers/
+│   │   ├── adminCarController.js
+│   │   ├── adminController.js
+│   │   ├── authController.js
+│   │   ├── bookingController.js
+│   │   ├── carController.js
+│   │   ├── paymentController.js
+│   │   └── profileController.js
+│   │
 │   ├── middleware/
+│   │   ├── adminMiddleware.js
+│   │   └── authMiddleware.js
+│   │
 │   ├── models/
+│   │   ├── booking.js
+│   │   ├── cars.js
+│   │   ├── payment.js
+│   │   ├── profile.js
+│   │   └── users.js
+│   │
 │   ├── routes/
-│   ├── utils/
-│   ├── server.js
-│   └── package.json
+│   │   ├── adminRoutes.js
+│   │   ├── authRoutes.js
+│   │   ├── bookingRoutes.js
+│   │   ├── carRoutes.js
+│   │   ├── paymentRoutes.js
+│   │   └── profileRoutes.js
+│   │
+│   ├── .env
+│   ├── .gitignore
+│   ├── createAdmin.js
+│   ├── package.json
+│   └── server.js
 │
-├── screenshots/
-│
-├── .env.example
 ├── .gitignore
 └── README.md
 ```
@@ -213,7 +261,7 @@ Payment Confirmation
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/DriveEase-Car-Rental.git
+git clone https://github.com/Adarshtechy/DriveEase-Car-Rental.git
 ```
 
 Navigate into the project:
@@ -242,13 +290,10 @@ Create a `.env` file:
 
 ```env
 PORT=8080
-
 MONGO_URI=your_mongodb_connection_string
-
-JWT_SECRET=your_jwt_secret
-
-RAZORPAY_KEY_ID=your_razorpay_key_id
-RAZORPAY_KEY_SECRET=your_razorpay_key_secret
+JWT_Secret_Key=your_jwt_secret
+RazorPay_Key_Id=your_razorpay_key_id
+RazorPay_Key_Secret=your_razorpay_key_secret
 ```
 
 Start the backend:
@@ -285,6 +330,13 @@ Install dependencies:
 npm install
 ```
 
+Create a `.env` file:
+
+```env
+VITE_Backend_Url=http://localhost:8080
+VITE_RazorPay_Key_Id=your_razorpay_key_id
+```
+
 Start the development server:
 
 ```bash
@@ -307,13 +359,10 @@ Create a `.env.example` file containing only the required variable names:
 
 ```env
 PORT=8080
-
 MONGO_URI=
-
-JWT_SECRET=
-
-RAZORPAY_KEY_ID=
-RAZORPAY_KEY_SECRET=
+JWT_Secret_Key=
+RazorPay_Key_Id=
+RazorPay_Key_Secret=
 ```
 
 Then create your own `.env` file locally and add the actual credentials.
@@ -344,34 +393,41 @@ The backend follows a controller-route-model architecture.
 backend/
 │
 ├── config/
-│   └── database configuration
+│   └── db.js
 │
 ├── controllers/
+│   ├── adminCarController.js
+│   ├── adminController.js
 │   ├── authController.js
-│   ├── profileController.js
 │   ├── bookingController.js
-│   ├── paymentController.js
 │   ├── carController.js
-│   └── admin controllers
+│   ├── paymentController.js
+│   └── profileController.js
 │
 ├── middleware/
-│   ├── authentication
-│   └── authorization
+│   ├── adminMiddleware.js
+│   └── authMiddleware.js
 │
 ├── models/
-│   ├── User
-│   ├── Profile
-│   ├── Car
-│   ├── Booking
-│   └── Payment
+│   ├── booking.js
+│   ├── cars.js
+│   ├── payment.js
+│   ├── profile.js
+│   └── users.js
 │
 ├── routes/
+│   ├── adminRoutes.js
 │   ├── authRoutes.js
-│   ├── profileRoutes.js
 │   ├── bookingRoutes.js
+│   ├── carRoutes.js
 │   ├── paymentRoutes.js
-│   └── adminRoutes.js
+│   └── profileRoutes.js
 │
+├── .env
+├── .gitignore
+├── createAdmin.js
+├── package-lock.json
+├── package.json
 └── server.js
 ```
 
@@ -420,26 +476,6 @@ During development, the application can be tested using:
 * Browser developer tools
 
 No real payment credentials should be used during development or testing.
-
----
-
-## 🚀 Future Improvements
-
-Planned improvements include:
-
-* Real-time car availability
-* Advanced booking calendar
-* Automated booking emails
-* SMS notifications
-* Coupon and discount system
-* Invoice generation
-* Improved payment reconciliation
-* Rental history analytics
-* Advanced admin reports
-* Cloud image storage
-* Production deployment
-* Automated testing
-* CI/CD pipeline
 
 ---
 
