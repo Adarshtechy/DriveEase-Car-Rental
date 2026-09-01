@@ -72,7 +72,7 @@ const Download = () => {
               <div className="download-features">
                 <div className="dl-feature-card">
                   <FaCarRear />
-                  <span>100+ Cars</span>
+                  <span>40+ Cars</span>
                 </div>
                 <div className="dl-feature-card">
                   <AiFillThunderbolt />
