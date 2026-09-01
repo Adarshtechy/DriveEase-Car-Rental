@@ -8,7 +8,7 @@ import { FaCar, FaRocket } from "react-icons/fa";
 
 const stats = [
     { icon: <FiUsers />, num: "10K+", label: "Happy Customers" },
-    { icon: <FaCar />, num: "500+", label: "Cars Available" },
+    { icon: <FaCar />, num: "40+", label: "Cars Available" },
     { icon: <FiMapPin />, num: "25+", label: "Locations" },
     { icon: <FiAward />, num: "5+", label: "Years Experience" },
 ];
